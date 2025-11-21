@@ -4,3 +4,4 @@
 .env
 *lock.json
 phpcs.xml
+composer.lock
