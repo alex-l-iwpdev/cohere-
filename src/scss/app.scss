@@ -3,7 +3,6 @@
 @import "bootstrap/scss/variables";
 
 /* $grid-gutter-width: 8px; */
-@import "bootstrap/scss/bootstrap-grid";
 @import "bootstrap/scss/bootstrap-utilities";
 @import "bootstrap-icons/font/bootstrap-icons";
 
@@ -11,4 +10,18 @@
 @import "slick-carousel/slick/slick";
 @import "slick-carousel/slick/slick-theme";
 
+// Layout
+@import "layout/reset";
+@import "layout/grid";
+@import "layout/typography";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/about";
+@import "layout/approach";
+@import "layout/banner";
+@import "layout/contacts";
+@import "layout/description";
+@import "layout/filter";
+@import "layout/news";
+@import "layout/project";
 

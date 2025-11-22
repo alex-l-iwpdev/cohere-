@@ -1,0 +1,128 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+img { box-sizing: content-box; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+* {
+	outline: 0 none;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+body {
+	line-height: 1.2;
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+	font-family: 'Satoshi', sans-serif;
+                                                
+}
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+section{
+	&:not(.banner){
+		padding: 100px 0;
+	}
+}
+body{
+	&.open-contacts{
+		overflow: hidden;
+	}
+}
+.brown{
+	background: rgba(72, 65, 59, 1);
+	color: #fff;
+	&:not(footer){
+		h2{
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 132px;
+				height: 75px;
+				top: 15px;
+				right: 0;
+				background-image: url(../images/co.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+		}
+		
+	}
+}
+.blue{
+	background: rgba(193, 218, 229, 1);
+}
+.brown-light{
+	background: #7F7369;
+	color: #fff;
+}
+body.cohere{
+    header{
+        .menu{
+            li{
+                a{
+                    color: #48413b;
+                    &:hover{
+                        text-shadow: 0 0 3px #48413b;
+                    }
+                }
+            }
+        }
+        .logo{
+            img{
+                filter: brightness(0) saturate(100%) invert(48%) sepia(27%) saturate(185%) hue-rotate(345deg) brightness(89%) contrast(93%);
+            }
+        }
+    }
+	.news-section,
+    .project-section{
+        padding: 0 0 45px;
+        .project-items{
+            margin: 0;
+        }
+    }
+}

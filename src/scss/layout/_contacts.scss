@@ -1,0 +1,183 @@
+.contacts-block{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0; 
+    width: 50lvw;
+    height: 100lvh;
+    background: rgba(127, 115, 105, 1);
+    z-index: 100; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    &.active{
+        transform: translateX(0%);
+    }
+    .close{
+        position: absolute;
+        top: 60px;
+        right: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        cursor: pointer;
+        gap: 15px;
+        transition: all 0.3s ease;
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(154deg) brightness(104%) contrast(106%);
+        }
+        &:after{
+            content: '';
+            position: relative;
+            right: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUuMDgzMyAyNS4zMzQ1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUuMDgzMjUyIiBoZWlnaHQ9IjI1LjMzNDQ3MyIgZmlsbD0ibm9uZSIgY3VzdG9tRnJhbWU9IiMwMDAwMDAiPgoJPGcgaWQ9Ikdyb3VwIDg3Ij4KCQk8ZyBpZD0iR3JvdXAgMjgiPgoJCQk8cmVjdCBpZD0iUmVjdGFuZ2xlIDEyIiB3aWR0aD0iMzMuMDAwMDAwIiBoZWlnaHQ9IjIuMDAwMDAwIiB4PSIwLjAwMDAwMCIgeT0iMC4wMDAwMDAiIGZpbGw9InJnYig3Miw2NSw1OSkiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEwNywtMC43MDcxMDcsMC43MDcxMDcsLTAuNzA3MTA3LDIzLjMzNDUsMjUuMzM0NSkiIC8+CgkJCTxyZWN0IGlkPSJSZWN0YW5nbGUgMTMiIHdpZHRoPSIzMy4wMDAwMDAiIGhlaWdodD0iMi4wMDAwMDAiIHg9IjAuMDAwMDAwIiB5PSIwLjAwMDAwMCIgZmlsbD0icmdiKDcyLDY1LDU5KSIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxMDcsLTAuNzA3MTA3LDAuNzA3MTA3LDAuNzA3MTA3LDAuMzM0NDczLDIzLjMzNDUpIiAvPgoJCTwvZz4KCTwvZz4KPC9zdmc+Cg==");
+        }
+    }
+    h2{
+        color: rgba(193, 218, 229, 1);
+        font-family: 'Satoshi', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: 0.26px;
+        margin-bottom: 50px;
+    }
+    form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        .submit{
+            button{
+                color: rgba(72, 65, 59, 1);
+                font-family: 'Switzer', sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22px;
+                letter-spacing: 5.4px;
+                text-transform: uppercase;
+                background: transparent;
+                border: none;
+                padding: 0 30px 0 0;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 30px;
+                &:hover{
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(154deg) brightness(104%) contrast(106%);
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0px;
+                    border: 12.5px solid transparent;
+                    border-top: 12.5px solid rgba(72, 65, 59, 1);
+                    border-right: 12.5px solid rgba(72, 65, 59, 1);
+                }
+            }
+        }
+        .textarea{
+            width: 100%; 
+            position: relative;
+            &.focus{
+                label{
+                    top: 0;
+                    font-size: 12px;
+                    transform: translateY(-50%);
+                }
+            }
+            label{
+                position: absolute;
+                top: 15px;
+                left: 0;
+                font-size: 14px;
+                color: #fff;
+                font-family: 'Helvetica Now Display';
+                font-size: 15px;
+                font-weight: 300;
+                letter-spacing: 0.52px;
+                pointer-events: none;
+            }   
+            textarea{
+                width: 100%;
+                height: 150px;
+                resize: none;
+                background: transparent;
+                border-width: 1px 0 1px 0;
+                border-style: solid;
+                border-color: #48413B;
+                font-size: 15px;
+                padding-top: 15px;
+                transition: all 0.3s ease;
+                color: #fff;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: #fff !important;
+                    background-color: transparent !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                &:-moz-autofill {
+                    background-color: transparent !important;
+                }
+            }
+        }
+        .input{
+            width: calc((100% - 30px) / 2);
+            position: relative;
+            &.focus{
+                label{
+                    top: 0;
+                    font-size: 12px;
+                }
+            }
+            label{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                font-size: 14px;
+                color: #fff;
+                font-family: 'Helvetica Now Display';
+                font-size: 15px;
+                font-weight: 300;
+                letter-spacing: 0.52px;
+                pointer-events: none;
+                transition: all 0.3s ease;
+            }
+            input{
+                width: 100%;
+                padding: 0px;
+                height: 60px;
+                background: transparent;
+                border-width: 0 0 1px 0;
+                border-style: solid;
+                border-color: #48413B;
+                font-size: 15px;
+                color: #fff;
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+                    -webkit-text-fill-color: #fff !important;
+                    background-color: transparent !important;
+                    transition: background-color 5000s ease-in-out 0s !important;
+                }
+                &:-moz-autofill {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}

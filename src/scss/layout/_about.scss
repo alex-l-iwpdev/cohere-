@@ -1,0 +1,54 @@
+.about-section{
+    .col-lg-7{
+        display: flex;
+        flex-direction: column;
+    }
+    .sline{
+        border-color: #48413B;
+    }
+    h3{
+        font-family: 'Satoshi', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.26px;
+        margin-top: 40px;
+    }
+    p{
+        font-family:' Helvetica Now Display';
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.52px;
+        margin-top: 30px;
+        &:first-of-type{
+            margin-top: auto;
+        }
+    }
+    img{
+        margin-left: auto;
+        display: table;
+        max-width: 100%;
+    }
+    .about-cohere{
+        color: rgba(72, 65, 59, 1);
+        font-family: 'Switzer' ,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 5.4px;
+        text-align: left;
+        text-transform: uppercase;
+        margin: 50px 0 75px;
+        max-width: fit-content;
+        position: relative;
+        padding-right: 35px;
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0px;
+            bottom: 3px;
+            border: 12.5px solid transparent; 
+            border-top: 12.5px solid rgba(72, 65, 59, 1); 
+            border-right: 12.5px solid rgba(72, 65, 59, 1);
+        }
+    }
+}

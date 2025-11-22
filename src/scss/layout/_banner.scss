@@ -1,0 +1,96 @@
+.banner{
+    img{
+        width: 100lvw;
+        height: 100lvh;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+    }
+    &:has(img){  
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            background: linear-gradient(180.00deg, rgba(0, 0, 0, 0.8),rgba(12.545454025268555, 12.545454025268555, 12.545454025268555, 0.53) 12%,rgba(22.452089309692383, 22.452089309692383, 22.452089309692383, 0.28) 24%,rgba(30, 30, 30, 0.08) 36%,rgba(24.19354820251465, 24.19354820251465, 24.19354820251465, 0.16) 52%,rgba(0, 0, 0, 0.8) 98%);
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
+        .back{
+            color:#C1DAE5;
+            &:hover{
+                text-shadow: 0 0 3px #C1DAE5; 
+            }
+            &:before{
+                border-top: 12.5px solid rgba(193, 218, 229, 1);
+                border-left: 12.5px solid rgba(193, 218, 229, 1);
+            }
+        }
+    }
+    .container{
+        position: relative;
+    }
+    &:has(h1){
+        .container{
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1{
+            color: #7f7369;
+            padding-top: 20px;
+        }
+    }
+    .back{
+        position: absolute;
+        right: 12px;
+        bottom: 40px;
+        text-transform: uppercase;
+        color:rgb(72, 65, 59);
+        font-family: 'Satoshi', sans-serif;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        z-index: 1;
+        &:hover{
+            text-shadow: 0 0 3px rgb(72, 65, 59); 
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            border: 12.5px solid transparent;
+            border-top: 12.5px solid rgba(72, 65, 59, 1);
+            border-left: 12.5px solid rgba(72, 65, 59, 1);
+        }
+    }
+    .tag{
+        position: absolute;
+        left: 12px;
+        bottom: 40px;
+        padding: 10px;
+        height: 34px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 12px;
+        letter-spacing: 5.4px;
+        font-family: 'Satoshi', sans-serif;
+        color:rgb(72, 65, 59);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(193, 218, 229, 0.8);
+    }
+}
