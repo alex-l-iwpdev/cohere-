@@ -36,7 +36,10 @@ class Main {
 	private function init(): void {
 		add_action( 'wp_enqueue_scripts', [ $this, 'add_scripts_and_styles' ] );
 		add_action( 'after_setup_theme', [ $this, 'theme_supports' ] );
+
 		add_filter( 'upload_mimes', [ $this, 'svg_upload_allow' ] );
+		add_filter( 'mce_buttons_2', [ $this, 'add_fontsize_to_toolbar' ] );
+		add_filter( 'tiny_mce_before_init', [ $this, 'tiny_mce_font_size_toolbar' ] );
 	}
 
 	/**
@@ -61,6 +64,9 @@ class Main {
 		add_theme_support( 'custom-logo' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menu' );
+		add_theme_support( 'align-wide' );
+		add_theme_support( 'editor-styles' );
+		add_theme_support( 'disable-custom-colors' );
 
 		register_nav_menus(
 			[
@@ -86,6 +92,38 @@ class Main {
 		$mimes['svg'] = 'image/svg+xml';
 
 		return $mimes;
+	}
+
+	/**
+	 * Add Font Size Button.
+	 *
+	 * @param array $buttons Array Buttons.
+	 *
+	 * @return array
+	 */
+	public function add_fontsize_to_toolbar( array $buttons ): array {
+		$index = array_search( 'formatselect', $buttons );
+
+		if ( $index !== false ) {
+			array_splice( $buttons, $index + 1, 0, 'fontsizeselect' );
+		} else {
+			array_unshift( $buttons, 'fontsizeselect' );
+		}
+
+		return $buttons;
+	}
+
+	/**
+	 * Add Font Sizes.
+	 *
+	 * @param array $init_array Settings Array.
+	 *
+	 * @return array
+	 */
+	public function tiny_mce_font_size_toolbar( array $init_array ) {
+		$init_array['fontsize_formats'] = '12px 14px 16px 18px 20px 24px 30px 36px 48px 64px';
+
+		return $init_array;
 	}
 
 }

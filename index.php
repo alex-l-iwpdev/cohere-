@@ -15,33 +15,6 @@ if ( have_posts() ) {
 	}
 }
 ?>
-
-	<section class="description brown">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<hr class="sline">
-					<h2>Every site has a story.<br>We find its best chapter. </h2>
-					<p>Cohere projects is founded on a simple belief: development should create value for everyone -
-						residents, investors, and the neighbourhoods they call home.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6">
-					<h5>Over 20 years, we’ve brought this philosophy to sought-after locations across South-East
-						Queensland
-						and beyond. We embody strategic masterplanning and design-led development. </h5>
-					<h5>We see the neighbourhood before it exists</h5><a class="readmore" href="#">READ MORE</a>
-				</div>
-				<div class="col-lg-6"><img src="images/img.png" alt=""></div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<hr class="sline">
-				</div>
-			</div>
-		</div>
-	</section>
 	<section class="project-section brown-light">
 		<div class="container">
 			<div class="row">
